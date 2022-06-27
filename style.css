@@ -8,6 +8,9 @@ body{
     color: var(--colortxt);
     font-family: 'Poppins', sans-serif;
 }
+.bars{
+    display: none;
+}
 :root{
     --lightblue:#92c3cd;
     --pinkbg:#f1eae5;
@@ -58,6 +61,7 @@ header{
     font-size: 1.1rem; 
     padding: 3px 10px;
     position: relative;
+    z-index: 999;
     
 }
 .rinz ul li a:after{
@@ -92,17 +96,16 @@ header{
 .hero{
     background: var(--darkbg);
     color: white;
+    padding: 50px 0;
 }
 .hero-con{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    
     padding-bottom: 50px;
 }
 .right-hero h1{
     font-size: 3.5rem;
     line-height: 3rem;
-    margin-top: 50px;
+    margin-top: 0px;
 }
 .right-hero p{
     margin: 20px 0;
@@ -128,6 +131,8 @@ header{
     background-position: right;
     background-repeat: no-repeat;
     background-size: contain;
+    float: right;
+    margin-top: -50px;
 }
 .first-section-right{
     display: flex;
@@ -175,8 +180,7 @@ header{
     width: 100%;
     max-width: 600px;
     margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
+    
 }
 .feature-img{
     width: 250px;
@@ -188,6 +192,8 @@ header{
     background-size: contain;
     position: relative;
     top: -20px;
+    float: right;
+    display: none;
 }
 .product{
     display: grid;
@@ -346,8 +352,8 @@ footer{
     
 }
 .foot{
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     font-size: .8rem;
 }
 .foot h3{
@@ -395,7 +401,8 @@ footer{
     background: white;
     padding-left: 5px;
     padding-right: 80px;
-    font-size: .8rem;
+    font-size: .6rem;
+    width: 230px;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
 }
@@ -409,4 +416,648 @@ footer{
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     color: var(--blue);
+}
+
+
+@media only screen and (max-width:840px){
+    .container{
+        max-width: 700px;
+    }
+    .logo{
+        font-size: 1rem;
+    }
+    .rinz ul li {
+        margin: 0 5px;
+    }
+    .rinz ul li a{
+        font-size: .9rem; 
+        
+    }
+    .rinz ul li a i{
+        font-size: 1rem;
+    }
+    .carts{
+        display: flex;
+    }
+    .carts li{
+        display: inline-block;
+        margin: 0 1px;
+        border: 1px solid var(--blue);
+        padding: 3px 15px;
+        border-radius: 18px;
+        
+    }
+
+
+
+    .right-hero h1{
+        font-size: 2.5rem;
+        line-height: 2rem;
+        margin-top: 50px;
+    }
+    .right-hero p{
+        font-size: .9rem;
+        margin: 10px 0px;
+    }
+    .hero-btn button{
+        padding: 10px 20px;
+        margin: 0 10px;
+    }
+    .left-hero{
+        width: 300px;
+        height: 400px;
+    }
+
+    .feature ul{
+        max-width: 250px;
+    }
+    .feature ul li{
+        list-style: disc;
+        font-size: .8rem;
+        margin: 2px 0;
+    }
+    .feature{
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
+    .feature-img{
+        width: 250px;
+        height: 250px;
+        background-attachment: fixed;
+        background: url('img/watch-one.png');
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: relative;
+        top: -20px;
+    }
+    
+    .product{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 10px;
+    }
+    .product-one{
+        width: 200px;
+        padding: 20px 10px;
+    }
+    .product-one img{
+        margin-bottom: 10px;
+    }
+    .product-text{
+        margin: 3px 0;
+        font-size: .6rem;
+    }
+    .product-text button{
+        margin: 0 5px;
+        border-radius: 5px;
+        padding:2px 10px;
+    }
+    .product-btn2 button{
+        margin-top: 10px;
+    }
+
+
+
+    
+    .wcop{
+        width: 250px;
+    
+    }
+
+
+    .customer img{
+        border-radius: 50%;
+        margin-left: 100px;
+        margin-top: 20px;
+    }
+    .customer-text{
+        max-width: 500px;
+    }
+    .customer-text p{
+        line-height: 1.4rem;
+    }
+    .customer-text h5{
+        text-align: center;
+        margin-bottom: 30px;
+     
+    }
+    .revi h2{
+        margin-top: 20px;
+    
+    }
+    .revi h6{
+    
+        text-align: center;
+    }
+    .stars i{
+        font-size: .7rem;
+        margin: 10px 0px;
+    }
+    .review{
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+
+    footer{
+        background: var(--lightblue);
+        padding: 30px 0;
+        
+    }
+    .foot{
+        display: flex;
+        justify-content: space-between;
+        font-size: .8rem;
+    }
+    .foot h3{
+        font-size: .9rem;
+        margin-bottom: 15px;
+    
+    }
+    .foot ul li{
+        margin-bottom: 5px;
+       
+    }
+    .links{
+        width: 100px;
+    }
+    .cont{
+        width: 150px;
+    }
+    .cont ul li a{
+        color: var(--blue);
+    }
+    .cont ul li i{
+        margin-right: 2px;
+    }
+    .soc ul{
+        display: flex;
+    }
+    .soc{
+        width: 150pX;
+    }
+    .soc ul li{
+        padding: 2px;
+        border: 1px solid var(--blue);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        margin: 0 1px;
+    }
+    .soc ul li i{
+        color: var(--blue);
+    }
+    .news p{
+        margin-bottom: 15px;
+    }
+    
+    .news-btn{
+        display: flex;
+        
+    }
+    .news-btn1 p{
+        display: flex;
+        height: 20px;
+        justify-content: center;
+        align-items: center;
+        background: white;
+        padding-left: 5px;
+        padding-right: 40px;
+        font-size: .4rem;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+    .news-btn2 p{
+        display: flex;
+        height: 20px;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid var(--blue);
+        padding: 0 10px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        color: var(--blue);
+    }
+    
+}
+
+@media only screen and (max-width:500px){
+    .container{
+        width: 100%;
+        max-width: 350px;
+    }
+    header{
+        background: var(--headerbg);
+        position: fixed;
+        width: 100%;
+    }
+    .head{
+        
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 60px;
+       
+        
+        
+        
+    }
+    .rinz{
+        display: flex;
+    }
+    .bars{
+        display: block;
+        cursor: pointer;
+    }
+    .line{
+        width: 30px;
+        height: 3px;
+        background: var(--lightblue);
+        margin: 3px 0;
+    }
+    .logo{
+        font-size: 1.2rem;
+        font-weight: 700;
+    }
+    .logo span{
+        color: var(--lightblue);
+    }
+    .rinz ul{
+        display: block;
+        position: absolute;
+        text-align: center;
+        background: #92c3cd;
+        width: 100%;
+        top: 60px;
+        display: none;
+        height: 100vh;
+        transition: .5s ease-out;
+        
+        
+    }
+    .rinz ul li a:hover{
+        background: var(--lightblue);
+        color: white;
+        width: 100%;
+        
+        
+    }
+    .rinz ul li a:after{
+        display: none;
+    }
+    .rinz ul li a:hover::after{
+        display: none;
+    }
+    
+   .active{
+        display: block;
+    }
+    .rinz ul li {
+        display: block;
+        margin: 50px 0px;
+       
+        
+    }
+    .rinz ul li a{
+        color: var(--colortxt);
+        font-size: 1.1rem; 
+        padding: 3px 10px;
+        color: var(--colortxt);
+        
+    }
+    .rinz ul li a:after{
+        position: absolute;
+        content: '';
+        left: 0px;
+        height: 25px;
+        width: 90px;
+        border-bottom: 2px solid var(--lightblue);
+        transition: left 5s ease-in;
+        opacity: 0;
+    }
+    .rinz ul li a:hover::after{
+        opacity: 1;
+    }
+    .rinz ul li a i{
+        font-size: 1rem;
+    }
+    .carts{
+        display: none;
+    }
+
+    .hero{
+        padding: 20px 0px;
+    }
+    .hero-con{
+        display: block;
+        
+    }
+    .right-hero{
+        width: 100%;
+    }
+    .right-hero h1{
+        font-size: 2rem;
+        line-height: 1.8rem;
+        padding-top: 0;
+        margin-top: 0;
+    }
+    .right-hero p{
+        margin: 10px 0;
+        font-size: .7rem;
+        word-spacing: .2rem;
+    }
+    .hero-btn button{
+        background: var(--blue);
+        padding: 15px 10px;
+        margin: 10px 0;
+        border-radius: 18px;
+        display: block;
+        width: 100%;
+    }
+    .hero-btn button a{
+        color: white;
+        text-transform: uppercase;
+        font-size: .8rem;
+    }
+    .left-hero{
+        width: 100%;
+        margin-top: 50px;
+        background: url("img/doublewatch.png");
+        background-position: right;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .first-section-right{
+        display: block;
+        
+        width: 100%;
+    }
+    .first-section-middle{
+        width: 100%;
+
+        background: url('img/camera-wo.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    .one li i{
+        font-size: 1rem;
+    }
+    .one li{
+       
+        font-size: 1rem;
+        margin-bottom: 10px;
+        
+    }
+
+    .feature ul{
+       
+        width: 100%;
+       
+    }
+    .feature ul li{
+        list-style: disc;
+        font-size: .8rem;
+        margin: 2px 0;
+        
+    }
+    .feature{
+        width: 100%;
+        margin: 0 auto;
+        display: block;
+    }
+    .feature-img{
+        width: 100%;
+
+        background-attachment: fixed;
+        background: url('img/watch-one.png');
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: relative;
+        top: -20px;
+    }
+
+    .product{
+        display: block;
+
+    }
+    .product-one{
+        width: 100%;
+        margin-bottom: 20px;
+        
+    }
+   
+    .compa{
+
+    
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        position: relative;
+    }
+    .compa ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        position: relative;
+    }
+    .compa ul li{
+        margin: 10px 0;
+        font-size: .6rem;
+    }
+    .compa ul li b{
+        font-size: .4rem;
+       
+    }
+    .compa ul li img{
+        width: 30px;
+        height: 30px;
+    }
+    
+    .wcop{
+        width: 120px;
+        margin-top: 140px;
+        display: none;
+        
+    }
+    
+    .wcop li{
+        width: 100px;
+        font-size: .2rem;
+        
+        margin: 1px 0;
+       
+    }
+    .empty{
+        display: none;
+    }
+    .comp-bord{
+        position: absolute;
+        
+        height: 2px;
+        background: black;
+        width: 100%;
+        top: 140px;
+    }
+    .mov img{
+        top: 80px;
+        position: absolute;
+    }
+    .mov li:nth-child(2){
+        position: absolute;
+        top: 110px;
+        
+    }
+    .mov li:nth-child(3){
+       
+        bottom: 135px;
+        position: absolute;
+    }
+    .mov li:nth-child(4){
+        
+        bottom: 105px;
+        position: absolute;
+    }
+    .mov li:nth-child(5){
+        
+        bottom: 65px;
+        position: absolute;
+    }
+    .mov li:nth-child(6){
+        
+        bottom: 35px;
+        position: absolute;
+    }
+    .mov li:nth-child(7){
+        bottom: 0px;
+        position: absolute;
+       
+    }
+    .comp-bord1{
+        display: none;
+    }
+    .comp-bord2{
+        display: none;
+    }
+    .comp-bord3{
+        display: none;
+    }
+    .review{
+        display: block;
+    }
+    .customer img{
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        margin-left: 130px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    .customer-text{
+        width: 100%;
+    }
+    .customer-text p{
+        line-height: 1.4rem;
+    }
+    .customer-text h5{
+        text-align: center;
+        margin-bottom: 20px;
+     
+    }
+    .revi h2{
+        margin-top: 20px;
+    
+    }
+    .revi h6{
+    
+        text-align: center;
+    }
+    .stars i{
+        font-size: .7rem;
+        margin: 10px 0px;
+    }
+    footer{
+        background: var(--lightblue);
+        padding: 10px 0;
+        
+    }
+    .foot{
+        display: block;
+    }
+    .foot h3{
+        font-size: .9rem;
+        margin-bottom: 10px;
+        width: 100%;
+    
+    }
+    .foot ul{
+        margin-bottom: 10px;
+    }
+    .foot ul li{
+        margin-bottom: 5px;
+    }
+    .cont ul li a{
+        color: var(--blue);
+    }
+    .cont ul li i{
+        margin-right: 2px;
+    }
+    .soc ul{
+        display: flex;
+    }
+    .soc ul li{
+        padding: 5px;
+        border: 1px solid var(--blue);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        margin: 0 1px;
+    }
+    .soc ul li i{
+        color: var(--blue);
+    }
+    .news p{
+        margin-bottom: 15px;
+    }
+    
+    .news-btn{
+        display: flex;
+        
+    }
+    .news-btn1 p{
+        display: flex;
+        height: 20px;
+        justify-content: center;
+        align-items: center;
+        background: white;
+        padding-left: 5px;
+        padding-right: 30px;
+        font-size: .8rem;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+    .news-btn2 p{
+        display: flex;
+        height: 20px;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid var(--blue);
+        padding: 0 10px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        color: var(--blue);
+    }
+
+    
 }
